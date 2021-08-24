@@ -30,11 +30,11 @@ namespace util {
 template <typename T>
 struct PairSecondGtComp
 {
-	bool operator()(T const &p1, T const &p2);
+	bool operator()(T const &p1, T const &p2) const;
 };
 
 template <typename T>
-bool PairSecondGtComp<T>::operator()(T const &p1, T const &p2)
+bool PairSecondGtComp<T>::operator()(T const &p1, T const &p2) const
 {
 	if (p1.second != p2.second)
 		return p1.second > p2.second;

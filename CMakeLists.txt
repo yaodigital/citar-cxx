@@ -1,5 +1,7 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.4)
 project(CITAR)
+
+set (CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 if (NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
@@ -12,7 +14,7 @@ ENDIF ()
 
 include(${CITAR_SOURCE_DIR}/cmake/CXXFlags.cmake)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++14")
 
 #if (NOT TR1_AVAILABLE)
 #  message (FATAL_ERROR "C++ TR1 headers are required!")
